@@ -1,1 +1,25 @@
-<p>movie-details works!</p>
+<!-- Details div -->
+<br>
+<div class="container details">
+    <div class="row">
+        <!-- Movie cover -->
+      <div class="movie-cover col-sm">
+        <img src="https://picsum.photos/seed/picsum/200/300" class="cover" alt="">
+      </div>
+      <!-- Movie details -->
+      <div class="movie-details col-sm">
+        <span ><p class="join-msg text-center">{{movie_name | uppercase}}</p></span>
+        <label>Synopsis:</label>
+        <span ><p class="details">{{movie_description}}</p></span>
+        <br>
+        <label for="genre">Genres</label>
+        <span ><p class="run-time">{{movie_genre}}</p></span>
+        <br>
+        <span ><p class="run-time">Director: {{movie_director}}</p></span>
+        <br>
+        <span ><p class="run-time">Run Time: {{movie_runtime}}</p></span>
+        <span ><p class="release-date">Release Date: {{movie_release_date}}</span>
+      </div>
+    </div>
+  </div>
+<br>
