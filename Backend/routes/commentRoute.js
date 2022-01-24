@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const commentContlroller = require('../controllers/commentContlroller');
 
 /**
  * Get all comments by movie ID

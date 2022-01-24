@@ -1,6 +1,6 @@
 const express = require('express');
-const watchlistController = require('../controllers/watchlistController');
 const router = express.Router();
+const watchlistController = require('../controllers/watchlistController');
 
 /**
  * Get all watchlist Items by user id

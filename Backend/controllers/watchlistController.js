@@ -1,6 +1,4 @@
-const { req } = require("express/lib/request");
-const { res } = require("express/lib/response");
-res
+
 const { Pool } = require('pg');
 
 const pool = new Pool();
