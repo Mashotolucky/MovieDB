@@ -13,6 +13,7 @@ export class MovieDetailsComponent implements OnInit {
   movie_release_date!: any;
   movie_director!: any;
   movie_genre!: any;
+  movie_rating: any = 1;
 
   constructor() { }
 
