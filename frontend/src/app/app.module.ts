@@ -15,8 +15,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from './components/footer/footer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +31,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MovieDetailsComponent,
     LoginComponent,
     SignupComponent,
-    FooterComponent
+    GalleryComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    HttpClientModule
+    //NgModule,
+    NgbModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
