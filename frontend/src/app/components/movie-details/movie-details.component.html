@@ -1,14 +1,18 @@
 <!-- Details div -->
+
 <br>
-<div class="container details">
+<div class="container">
+  
     <div class="row">
         <!-- Movie cover -->
+        <span class="rating d-flex justify-content-end">Rating:  <i class="checked fas fa-star"></i> {{movie_rating}}</span>
+        
       <div class="movie-cover col-sm">
         <img src="https://picsum.photos/seed/picsum/200/300" class="cover" alt="">
       </div>
       <!-- Movie details -->
       <div class="movie-details col-sm">
-        <span ><p class="join-msg text-center">{{movie_name | uppercase}}</p></span>
+        <span ><p class="join-msg text-start text-bold">{{movie_name}}</p></span>
         <label>Synopsis:</label>
         <span ><p class="details">{{movie_description}}</p></span>
         <br>
@@ -21,5 +25,4 @@
         <span ><p class="release-date">Release Date: {{movie_release_date}}</span>
       </div>
     </div>
-  </div>
 <br>
