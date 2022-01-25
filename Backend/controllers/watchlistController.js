@@ -26,7 +26,7 @@ module.exports = {
     },
     /**
      * 
-     * @param { body.userId , body.movieId } req 
+     * @param {*} req 
      * @param {*} res 
      */
     create: (req, res) => {
@@ -46,7 +46,7 @@ module.exports = {
     },
     /**
      * 
-     * @param {params.id} req 
+     * @param {*} req 
      * @param {*} res 
      */
     remove: (req, res) => {
