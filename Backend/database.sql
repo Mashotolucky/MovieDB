@@ -30,6 +30,8 @@ DROP TABLE IF EXISTS comments CASCADE;
 CREATE TABLE comments(
     comment_id SERIAL PRIMARY KEY,
     message VARCHAR(1000) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users (user_id),
-    FOREIGN KEY (movie_id) REFERENCES movies (movie_id)
-)
+    user_id INT NOT NULL,
+    movie_id INT NOT NULL,
+    FOREIGN KEY(user_id) REFERENCES users (user_id),
+    FOREIGN KEY(movie_id) REFERENCES movies (movie_id)
+);
