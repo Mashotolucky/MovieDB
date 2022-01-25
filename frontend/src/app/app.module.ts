@@ -37,7 +37,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgModule,
+    //NgModule,
     NgbModule
 
   ],
