@@ -23,7 +23,7 @@ export class CarousalComponent implements OnInit {
     .subscribe(res => {
       
       console.log(res);
-      this.movie = res.poster_path;
+      this.movie = res.backdrop_path;
       console.log(this.movie);
       
       
