@@ -5,14 +5,14 @@
   
     <div class="row">
         <!-- Movie cover -->
-        <span class="rating d-flex justify-content-end">Rating:  <i class="fas fa-star"></i> {{movie_rating}}</span>
+        <span class="rating d-flex justify-content-end">Rating:  <i class="checked fas fa-star"></i> {{movie_rating}}</span>
         
       <div class="movie-cover col-sm">
         <img src="https://picsum.photos/seed/picsum/200/300" class="cover" alt="">
       </div>
       <!-- Movie details -->
       <div class="movie-details col-sm">
-        <span ><p class="join-msg text-center">Title of the movie</p></span>
+        <span ><p class="join-msg text-start text-bold">{{movie_name}}</p></span>
         <label>Synopsis:</label>
         <span ><p class="details">{{movie_description}}</p></span>
         <br>
@@ -26,7 +26,3 @@
       </div>
     </div>
 <br>
-<h1>Actors</h1>
-<app-actors></app-actors>
-<h1>Gallery</h1>
-<app-gallery></app-gallery>
