@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailsComponent implements OnInit {
 
+  movie_name: any = "Title of the movie";
+  movie_description: any = "Shiba did this";
+  movie_runtime!: any;
+  movie_release_date!: any;
+  movie_director!: any;
+  movie_genre!: any;
+  movie_rating: any = 1;
+
   constructor() { }
 
   ngOnInit(): void {

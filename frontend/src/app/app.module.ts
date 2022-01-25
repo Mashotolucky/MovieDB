@@ -14,6 +14,8 @@ import { DetailsPageComponent } from './components/details-page/details-page.com
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { SignupComponent } from './components/signup/signup.component';
     DetailsPageComponent,
     MovieDetailsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
