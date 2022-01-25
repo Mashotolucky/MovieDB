@@ -1,6 +1,4 @@
-const { req } = require("express/lib/request");
-const { res } = require("express/lib/response");
-res
+
 const { Pool } = require('pg');
 
 const pool = new Pool();
@@ -28,7 +26,7 @@ module.exports = {
     },
     /**
      * 
-     * @param { body.userId , body.movieId } req 
+     * @param {*} req 
      * @param {*} res 
      */
     create: (req, res) => {
@@ -48,7 +46,7 @@ module.exports = {
     },
     /**
      * 
-     * @param {params.id} req 
+     * @param {*} req 
      * @param {*} res 
      */
     remove: (req, res) => {
