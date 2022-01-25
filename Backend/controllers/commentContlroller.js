@@ -74,7 +74,7 @@ module.exports = {
      */
     update: (req,res) => {
         let query = {
-            text: 'UPDATE comments SET content = $1 WHERE id = $2',
+            text: 'UPDATE comments SET content = $1 WHERE id = $2 RETURNING *',
             value: [req.params.id, req.body.comment]
         }
         pool.query(query)
