@@ -31,12 +31,15 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     MovieDetailsComponent,
     LoginComponent,
     SignupComponent,
-    GalleryComponent
+    GalleryComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    //NgModule,
     NgbModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
