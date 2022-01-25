@@ -1,0 +1,14 @@
+.join-msg{
+    color:black;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.cover{
+    flex-shrink: 0;
+    min-width: 50%;
+    min-height: 50%
+}
+.checked {
+    color: orange;
+  }
