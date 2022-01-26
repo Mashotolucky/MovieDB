@@ -2,7 +2,7 @@ const { Query } = require("pg/lib/client");
 
 const { Pool } = ('pg');
 
-const pool = new pool();
+const pool = new Pool();
 
 module.exports = {
     /**
