@@ -1,8 +1,8 @@
 const express = require('express');
-const commentRoute = require('./routes/commentRoute');
-const userRoute =  require('./routes/userRoute')
-const watchlistRoute = require('./routes/watchlistRoute')
-const authRoute = require('./routes/authRoutes')
+const commentRoute = require('./routes/comment');
+const userRoute =  require('./routes/user')
+const watchlistRoute = require('./routes/watchlist')
+const authRoute = require('./routes/auth')
 const app = express();
 
 app.use(express.json());

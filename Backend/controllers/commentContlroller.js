@@ -30,7 +30,7 @@ exports.get = (req, res) => {
  * @param {*} res 
  */
 exports.create = (req, res) => {
-    const {userId, movieId, comment} = req.body
+    const {userId, movieId, comment, } = req.body
     let query = {
         text: 'INSERT INTO comments(user_id, movie_id, message) VALUES($1, $2, $3) RETURNING *',
         value: [userId, movieId, comment]
