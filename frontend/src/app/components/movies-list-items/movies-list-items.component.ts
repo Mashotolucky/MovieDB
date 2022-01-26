@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MoviesListItemsComponent implements OnInit {
 
   movie_rating!: any;
+  movie_name: any = "Movie name";
   constructor() { 
     
   }

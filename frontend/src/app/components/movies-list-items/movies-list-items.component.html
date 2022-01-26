@@ -2,20 +2,17 @@
     <app-carousal></app-carousal>
 </div>
 <div class="container">
+    <h1>Movies</h1>
     <div class="card rounded-0 mt-3 p-1" routerLink='details' style="width: 14rem;">  
         <!-- routerLink="/details-page" -->
         <img src="https://picsum.photos/200/300" class="card-img-top ronded-0 " alt="...">
-        <p class="card-text bg-light text-dark text-right">Movie
-        </p>
         <div class="d-flex justify-content-between">
-             
-    
             <div class="container">
                 <div class="row">
-                    <div class="d-flex flex-row justify-content-end align-items-center mt-4">
-                        <div class="dates d-flex flex-row align-items-center">
-                            <span class="rating d-flex justify-content-end">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span>
-                
+                    <div class="mt-4">
+                        <div class="dates">
+                            <span class="movie_name">{{movie_name}}</span><br>
+                            <span class="rating">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span>
                         </div>
                     </div>
                 </div>
