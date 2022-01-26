@@ -1,4 +1,4 @@
-const Pool = require('pg').Pool;
+const Client = require('pg');
 
 const credentials = {
     user: "postgres",
@@ -15,9 +15,9 @@ const credentials = {
 //   })
 
 async function poolDemo() {
-  const pool = new Pool(credentials);
-  const now = await pool.query("SELECT NOW()");
-  await pool.end();
+  const client = new Client(credentials);
+  const now = await client.query("SELECT NOW()");
+  await client.end();
 
   return now;
 }
@@ -25,7 +25,7 @@ async function poolDemo() {
 
 
 const getUsers = (req, res) =>{
-  pool.query('SELECT * FROM user ORDER BY id ASC', (error, results)=>{
+  client.query('SELECT * FROM user ORDER BY id ASC', (error, results)=>{
     if(error){
       throw error;
     }
@@ -34,7 +34,7 @@ const getUsers = (req, res) =>{
 };
 
 const create = (req, res) =>{
-  pool.query('INSERT INTO (name, email) VALUES ($1, $2) RETURNING id',
+  client.query('INSERT INTO (name, email) VALUES ($1, $2) RETURNING id',
   [name,email],
   (error, results) =>{
     if(error){
@@ -44,7 +44,4 @@ const create = (req, res) =>{
   })
 }
 
-module.exports = {
-  getUsers,
-  create
-}
+module.exports = pool;}

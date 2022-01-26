@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListItemsComponent implements OnInit {
 
-  rating = 0;
+  movie_rating!: any;
   constructor() { 
     
   }
@@ -15,9 +15,4 @@ export class MoviesListItemsComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  ratings(){
-    return this.rating = this.rating + 1;
-  }
-
 }
