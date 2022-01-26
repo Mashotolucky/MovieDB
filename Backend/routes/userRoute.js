@@ -17,3 +17,5 @@ router.delete('/:id', userController.removeOne)
  * update a user by id
  */
 router.put('/:id', userController.update)
+
+module.exports = router

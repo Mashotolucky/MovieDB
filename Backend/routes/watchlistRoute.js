@@ -16,3 +16,5 @@ router.post('/', watchlistController.create)
  * delete watchlist item by id
  */
 router.delete('/:id', watchlistController.remove)
+
+module.exports = router
