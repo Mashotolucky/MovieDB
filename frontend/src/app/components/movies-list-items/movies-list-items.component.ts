@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieServiceService } from 'src/app/services/movie-service.service';
 
 @Component({
   selector: 'app-movies-list-items',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MoviesListItemsComponent implements OnInit {
 
   rating = 0;
-  constructor() { 
+  constructor(private movieApi: MovieServiceService) { 
     
   }
 
@@ -18,6 +19,10 @@ export class MoviesListItemsComponent implements OnInit {
 
   ratings(){
     return this.rating = this.rating + 1;
+  }
+
+  getPupolarMovies(): void{
+    this.movieApi.popularMovies
   }
 
 }
