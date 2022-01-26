@@ -11,3 +11,5 @@ router.post('/login', () => {})
  * register new user
  */
 router.delete('/signup', () => {})
+
+module.exports = router
