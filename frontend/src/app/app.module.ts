@@ -17,6 +17,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MovieDetailsComponent,
     LoginComponent,
     SignupComponent,
+<<<<<<< HEAD
     FooterComponent
+=======
+    GalleryComponent,
+    FooterComponent
+    
+>>>>>>> 6a9e04b09ec7de7952b78fa9c576fa2ebbb3b5f9
   ],
   imports: [
     BrowserModule,
