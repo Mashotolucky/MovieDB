@@ -1,5 +1,5 @@
 const { rows } = require('pg/lib/defaults');
-const seed = require('../db/seeder')
+const seed = require('../db/config')
 
 const pool = seed;
 
