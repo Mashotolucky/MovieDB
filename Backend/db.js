@@ -1,12 +1,12 @@
 const Client = require('pg');
 
-const pool = new Pool({
+const credentials = {
     user: "postgres",
     password: "groupe",
     database: "movie_db",
     host: "localhost",
     port: "5432"
-});
+};
 
 // pool.query('SELECT NOW()', (err, res) => {
     
@@ -42,5 +42,6 @@ const create = (req, res) =>{
     }
     res.status(2001).send(`User added with ID:${results.rows[0].id}`);
   })
+}
 
 module.exports = pool;}
