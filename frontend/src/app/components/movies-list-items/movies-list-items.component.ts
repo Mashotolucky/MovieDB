@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoviesListItemsComponent implements OnInit {
 
-  constructor() { }
+  rating = 0;
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
+
+  }
+
+  ratings(){
+    return this.rating = this.rating + 1;
   }
 
 }

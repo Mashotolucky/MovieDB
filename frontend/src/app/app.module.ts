@@ -13,9 +13,10 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { DetailsPageComponent } from './components/details-page/details-page.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { LoginComponent } from './components/login/login.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FooterComponent } from './components/footer/footer.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -32,13 +33,17 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MovieDetailsComponent,
     LoginComponent,
     SignupComponent,
+    GalleryComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    //NgModule,
     NgbModule,
     HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
