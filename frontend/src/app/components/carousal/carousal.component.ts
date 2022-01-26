@@ -65,6 +65,7 @@ export class CarousalComponent implements OnInit {
     console.log(this.title);
     // console.log(this.pic);
     
+
   }
 
 }
