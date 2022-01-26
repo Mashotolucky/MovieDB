@@ -1,25 +1,15 @@
-// const express = require('express');
-// const app = express();
+const { Pool, Client } = require('pg')
+const express = require('express');
+const commentRoute = require('./routes/commentRoute');
+const app = express();
 
-// const pool = require('./db');
 
-// app.use(express.json()); // req.body
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// //creat routes
-// app.post("/user", async(req,res) =>{
-//     try {
-//         //Await
-//         const {description} = req.body;
-//         const newUser = await pool.query(
-//             "INSERT INTO user (description) VALUES ($1) RETURNING *",
-//             [description]
-//         );
-//         res.json(newUser);
-//     } catch (error) {
-//         console.log(err.message);
-//     }
-// })
+app.use('/comment', commentRoute)
 
-// app.listen(3000, ()=>{
-//     console.log('server is listening to port 3000');
-// })
+
+app.listen(3000, ()=>{
+    console.log('server is listening to port 3000');
+})
