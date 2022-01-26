@@ -1,7 +1,3 @@
-
-// const { query } = require('express');
-// const req = require('express/lib/request');
-const { Pool } = require('pg');
 const { rows } = require('pg/lib/defaults');
 const seed = require('../routes/seeder')
 
@@ -13,7 +9,7 @@ const pool = seed;
  * @param {*} req 
  * @param {*} res 
  */
-exports.get = function (req, res) {
+exports.get = (req, res) => {
     let query = {
         text: 'SELECT * FROM comments WHERE movie_id = $1',
         value: [req.params.movieId]
@@ -33,7 +29,7 @@ exports.get = function (req, res) {
  * @param {*} req 
  * @param {*} res 
  */
-exports.create = function (req, res) {
+exports.create = (req, res) => {
     const {userId, movieId, comment} = req.body
     let query = {
         text: 'INSERT INTO comments(user_id, movie_id, message) VALUES($1, $2, $3) RETURNING *',
@@ -54,7 +50,7 @@ exports.create = function (req, res) {
  * @param {*} req 
  * @param {*} res 
  */
-exports.remove = function (req,res) {
+exports.remove = (req, res) => {
     let query = {
         text: 'DELETE FROM comments WHERE id = $1 RETURNING *',
         value: [req.params.id]
@@ -74,7 +70,7 @@ exports.remove = function (req,res) {
  * @param {*} req 
  * @param {*} res 
  */
-exports.update = function (req,res) {
+exports.update = (req,res) => {
     let query = {
         text: 'UPDATE comments SET content = $1 WHERE id = $2 RETURNING *',
         value: [req.params.id, req.body.comment]
