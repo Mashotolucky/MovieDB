@@ -16,7 +16,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     GalleryComponent,
-    
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     //NgModule,
     NgbModule,
     HttpClientModule

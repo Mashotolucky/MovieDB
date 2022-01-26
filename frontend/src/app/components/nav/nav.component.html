@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top col-sm-12">
 
   
-  <div class="container-fluid d-flex flex-sm-row">
+  <div class="container-fluid d-flex flex-sm-row p-2">
 
     <a class="navbar-brand mx-0 justify-content-md-start" href="#">
       <img src="https://picsum.photos/seed/picsum/200/300" width="30" height="30" alt="">
@@ -22,11 +22,20 @@
         <div class="collapse navbar-collapse justify-content-sm-end" id="navbarNav">
           <ul class="navbar-nav active">
             
+            <li class="nav-item mx-2">
+              <app-search></app-search>
+            </li>
+
             <li class="nav-item ">
-              <a class="nav-link" href="#"><span><button class="btn btn-danger join-btn text-white">Join now</button></span><span class="sr-only">(current)</span></a>
+              <button  class="btn btn-danger p-1.5 join-btn mx-1" routerLink='signup'>
+                Join now
+              </button>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><span><button class="btn btn-outline-secondary text-white">sign in</button></span></a>
+              <!-- <button type="button"  class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">sign in</button> -->
+              <button  class="btn btn-secondary p-1.5 join-btn mx-2" data-bs-toggle="modal" data-bs-target="#modelId">
+                Sign in
+              </button>
             </li>
             <li>
               <!-- <a class="nav-link"><span><app-search></app-search></span></a> -->
@@ -40,4 +49,40 @@
     
   </nav>
 </div>
+
+
+
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+            <h5 class="modal-title">JOIN NOW</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      <div class="modal-body">
+        <div class="container-fluid ">
+          <app-login></app-login>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var modelId = document.getElementById('modelId');
+
+  modelId.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      let button = event.relatedTarget;
+      // Extract info from data-bs-* attributes
+      let recipient = button.getAttribute('data-bs-whatever');
+
+    // Use above variables to manipulate the DOM
+  });
+</script>
 
