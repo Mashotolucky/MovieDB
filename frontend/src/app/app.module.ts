@@ -17,6 +17,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignupComponent,
     GalleryComponent,
+    FooterComponent
     
   ],
   imports: [
