@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-  username: any = "Shiba username";
-  comment: any = "Koenaite comment";
   constructor() { }
 
   ngOnInit(): void {
