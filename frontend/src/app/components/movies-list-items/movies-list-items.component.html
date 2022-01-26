@@ -1,25 +1,25 @@
 <div class="mt-0">
     <app-carousal></app-carousal>
 </div>
-<div class="container">
-    <h1>Movies</h1>
-    <div class="card rounded-0 mt-3 p-1" routerLink='details' style="width: 14rem;">  
-        <!-- routerLink="/details-page" -->
-        <img src="https://picsum.photos/200/300" class="card-img-top ronded-0 " alt="...">
-        <div class="d-flex justify-content-between">
-            <div class="container">
-                <div class="row">
-                    <div class="mt-4">
-                        <div class="dates">
-                            <span class="movie_name">{{movie_name}}</span><br>
-                            <span class="rating">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span>
-                        </div>
-                    </div>
-                </div>
-          </div>
-        </div>
+
+<div class="container-fluid mt-3">
+    <h4><strong>Browse Movies</strong> </h4>
+</div>
+
+<div class="container-fluid d-flex flex-wrap mt-2 mx-2">
+    <div class="card mt-4 mx-3"  routerLink='details' style="width: 12rem;" *ngFor="let movie of movieArr">
+                
+        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="movie.original_title">
+                <!-- <div class="card-body">
+                    <p class="card-title">{{movie.original_title}}</p>
+                    <p class="card-text">{{movie.release_date}}</p>
+        </div> -->
     </div>
 </div>
+
+        
+
+
 
  
 
