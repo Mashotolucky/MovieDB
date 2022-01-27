@@ -15,9 +15,13 @@ export class MoviesListItemsComponent implements OnInit {
   title: any;
   pic: any;
 
+  startPage: number;
+  paginationLimit: number;
+
 
   constructor(private movieApi: MovieServiceService) { 
-    
+    this.startPage = 10;
+    this.paginationLimit = 20;
   }
 
   ngOnInit(): void {
@@ -37,16 +41,23 @@ export class MoviesListItemsComponent implements OnInit {
   //   })
   // }
 
+  showMore(){
+    this.paginationLimit = Number(this.paginationLimit) + 10;
+  }
+
+  showLess(){
+    this.paginationLimit = Number(this.paginationLimit) - 10;
+  }
+
   getPupolarMovies(): void{
     this.movieApi.popularMovies()
     .subscribe((res: any) => {
       this.movieArr = res.results; 
       console.log(this.movieArr);
       //console.log(this.movieArr[0].title);
-      
     },err =>{
       console.log(err);
-      
+  
     })
   }
 
@@ -56,6 +67,12 @@ export class MoviesListItemsComponent implements OnInit {
     // this.pic = this.movieArr.results.backdrop_path;
     console.log(this.title);
     // console.log(this.pic);
+    
+  }
+
+  setMovieId(id: any): void{
+    this.movieApi.setDetailMovieId(id);
+    console.log(id);
     
   }
 }

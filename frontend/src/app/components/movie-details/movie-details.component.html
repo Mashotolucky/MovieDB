@@ -1,28 +1,28 @@
 <!-- Details div -->
 
-<br>
-<div class="container">
+<br><br><br><br>
+<!-- <div class="container-fluid" style="background: url({{background}});"> -->
+  <div class="container-fluid text-light p-5" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.308)), url({{background}}) no-repeat center;">
   
-    <div class="row">
+    <div class="row" 
+    style="background:  rgba(0, 0, 0, 0.5) ;">
         <!-- Movie cover -->
-        <span class="rating d-flex justify-content-end">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span>
-        
-      <div class="movie-cover col-sm">
-        <img src="https://picsum.photos/seed/picsum/200/300" class="cover" alt="">
+        <!-- <span class="rating d-flex justify-content-end">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span> -->
+      <div class="p-0 m-0 col-md" style="max-width: 20rem;">
+        <img  src="{{poster}}" class="img-fluid" alt="">
       </div>
+        
+
       <!-- Movie details -->
-      <div class="movie-details col-sm">
-        <span ><p class="join-msg text-start text-bold">{{movie_name}}</p></span>
-        <label>Synopsis:</label>
-        <span ><p class="details">{{movie_description}}</p></span>
-        <br>
-        <label for="genre">Genres</label>
-        <span ><p class="run-time">{{movie_genre}}</p></span>
-        <br>
-        <span ><p class="run-time">Director: {{movie_director}}</p></span>
-        <br>
-        <span ><p class="run-time">Run Time: {{movie_runtime}}</p></span>
+      <div class="movie-details ms-5 col-md">
+        <h1 class=" display-4 text-start text-light">{{movie_name}}</h1>
+        <p class="details"><strong><i>{{movie_tag}}</i></strong><br><br>{{movie_description}} </p>
+      
+        <span ><p class="run-time">Run Time: {{movie_runtime}} Minutes</p></span>
         <span ><p class="release-date">Release Date: {{movie_release_date}}</span>
       </div>
+
     </div>
+
+  </div> 
 <br>

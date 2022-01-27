@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MovieServiceService } from 'src/app/services/movie-service.service';
 
 @Component({
   selector: 'app-gallery',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movieApi: MovieServiceService,
+              private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }
