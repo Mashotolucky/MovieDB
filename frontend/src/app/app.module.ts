@@ -35,7 +35,8 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     SignupComponent,
     GalleryComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,

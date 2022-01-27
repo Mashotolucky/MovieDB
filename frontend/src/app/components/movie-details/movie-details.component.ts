@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Variable } from '@angular/compiler/src/render3/r3_ast';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Chart } from 'chart.js';
 import { MovieServiceService } from 'src/app/services/movie-service.service';
+
 
 @Component({
   selector: 'app-movie-details',
@@ -15,7 +18,10 @@ export class MovieDetailsComponent implements OnInit {
   movie_release_date!: any;
   movie_director!: any;
   movie_genre: any = [];
-  movie_rating: any = 1;
+  movie_rating: any;
+  
+
+ 
 
   constructor(private movieApi: MovieServiceService) { }
 
@@ -23,8 +29,11 @@ export class MovieDetailsComponent implements OnInit {
   background: any;
   poster: any;
 
+  myChart: any;
+
   ngOnInit(): void {
     this.getDetailsMovieIteam();
+    
   }
 
   getDetailsMovieIteam(): void{
@@ -43,7 +52,13 @@ export class MovieDetailsComponent implements OnInit {
       this.movie_genre = this.movie.genres;
       this.movie_runtime = this.movie.runtime;
       this.movie_release_date = this.movie.release_date;
+      this.movie_rating = this.movie.vote_average
     })
-  }
+  };
+
+
+
+  
 
 }
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieServiceService } from 'src/app/services/movie-service.service';
 
 @Component({
   selector: 'app-actors',
@@ -12,9 +13,30 @@ export class ActorsComponent implements OnInit {
   character_name!: any;
   isClicked: boolean = false;
 
-  constructor() { }
+  
+
+  constructor(private movieApi: MovieServiceService) { }
+
+  movieActors: any = [];
+  profile: any;
 
   ngOnInit(): void {
+    this.actors();
+  }
+
+
+  actors(): void{
+
+    for(let i = 0; i <= 6; i++){
+      this.movieApi.getActors()
+    .subscribe(res =>{
+      this.movieActors = res.cast;
+      console.log(this.movieActors);
+      this.profile = "http://image.tmdb.org/t/p/w500/"+`${this.movieActors[1].profile_path}`;
+      console.log(this.profile);
+    })
+    }
+    
   }
    
   clicked(): void {

@@ -1,18 +1,20 @@
 
 <div class="container col-sm">
     <div class="row">
-        <div class="btn float right">
+        <!-- <div class="btn float right">
             <button type="button" class="btn btn-primary mb-1" >Show More</button>
-        </div>        
+        </div>         -->
     <!-- Movie cover -->
-    <div class="movie-cover col-sm-2">
-        <img src="https://picsum.photos/seed/picsum/200/300" class="cover" alt="">
-      </div>
+    <div class="movie-cover col-sm-2 " *ngFor="let actor of movieActors">
+      
+        <img src="http://image.tmdb.org/t/p/w500/{{actor.profile_path}}" class="img-fluid" alt="">
+      
       <!-- Movie details -->
-      <div class="movie-details col-sm-2">
-        <span ><p class="details">Actor: {{actor_name}}</p></span>
-        <span ><p class="run-time">Character: {{character_name}}</p></span>
-        <br>
-      </div>
+        <span ><p class="details">{{actor.name}}</p></span>
+        <!-- <span ><p class="run-time">Character: {{character_name}}</p></span> -->
     </div>
+    
+  </div>
 </div>
+
+<br>

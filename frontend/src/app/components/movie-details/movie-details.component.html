@@ -3,9 +3,10 @@
 <br><br><br><br>
 <!-- <div class="container-fluid" style="background: url({{background}});"> -->
   <div class="container-fluid text-light p-5" style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.308)), url({{background}}) no-repeat center;">
-  
+    
     <div class="row" 
     style="background:  rgba(0, 0, 0, 0.5) ;">
+    
         <!-- Movie cover -->
         <!-- <span class="rating d-flex justify-content-end">Rating:  <i class=" checked fas fa-star"></i> {{movie_rating}}</span> -->
       <div class="p-0 m-0 col-md" style="max-width: 20rem;">
@@ -15,6 +16,9 @@
 
       <!-- Movie details -->
       <div class="movie-details ms-5 col-md">
+        <span class="float-end border rounded-circle border-warning p-1 border-2 mt-3 text-center mx-auto" style="width: 3rem; height: 3rem;"><h4>{{movie_rating}}</h4></span>
+
+        <div class="nameRate"></div>
         <h1 class=" display-4 text-start text-light">{{movie_name}}</h1>
         <p class="details"><strong><i>{{movie_tag}}</i></strong><br><br>{{movie_description}} </p>
       
@@ -22,7 +26,7 @@
         <span ><p class="release-date">Release Date: {{movie_release_date}}</span>
       </div>
 
+      
     </div>
-
   </div> 
 <br>
