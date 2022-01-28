@@ -5,15 +5,17 @@
             <button type="button" class="btn btn-primary mb-1" >Show More</button>
         </div>         -->
     <!-- Movie cover -->
-    <div class="movie-cover col-sm-2 " *ngFor="let actor of movieActors">
+    <div class="movie-cover col-sm-2 " *ngFor="let actor of movieActors | paginate: { itemsPerPage: 6, currentPage: 1 }">
       
         <img src="http://image.tmdb.org/t/p/w500/{{actor.profile_path}}" class="img-fluid" alt="">
       
       <!-- Movie details -->
         <span ><p class="details">{{actor.name}}</p></span>
+
+        
         <!-- <span ><p class="run-time">Character: {{character_name}}</p></span> -->
     </div>
-    
+    <pagination-controls class="mx-auto" (pageChange)="1"></pagination-controls>
   </div>
 </div>
 

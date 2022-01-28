@@ -19,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -44,8 +45,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     //NgModule,
     NgbModule,
-    HttpClientModule
-
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

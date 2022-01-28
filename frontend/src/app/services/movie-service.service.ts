@@ -48,4 +48,8 @@ export class MovieServiceService {
   getActors(): Observable<any> {
     return this.http.get(`http://api.themoviedb.org/3/movie/${this.detailMovieId}/casts?api_key=bd71dc7772433931f0b658c89f90bf2d`)
   }
+
+  getTrailor(): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${this.detailMovieId}/videos?api_key=bd71dc7772433931f0b658c89f90bf2d&language=en-US`)
+  }
 }
